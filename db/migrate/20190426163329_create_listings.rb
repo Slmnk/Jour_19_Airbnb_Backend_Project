@@ -8,6 +8,7 @@ class CreateListings < ActiveRecord::Migration[5.2]
       t.boolean :has_wifi
       t.text :welcome_message
       t.belongs_to :user, index: true
+      t.belongs_to :listing, index:true
 
       t.timestamps
     end

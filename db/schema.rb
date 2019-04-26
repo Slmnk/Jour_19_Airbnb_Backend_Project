@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 2019_04_26_163339) do
     t.boolean "has_wifi"
     t.text "welcome_message"
     t.bigint "user_id"
+    t.bigint "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["listing_id"], name: "index_listings_on_listing_id"
     t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
@@ -38,8 +40,10 @@ ActiveRecord::Schema.define(version: 2019_04_26_163339) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.bigint "user_id"
+    t.bigint "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["listing_id"], name: "index_reservations_on_listing_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 

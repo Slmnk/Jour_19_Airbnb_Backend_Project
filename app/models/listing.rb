@@ -14,7 +14,9 @@ class Listing < ApplicationRecord
   validates :welcome_message,
     presence: true
 
-  belongs_to :user, :city
+  belongs_to :user
+  belongs_to :city
+  
   has_many :reservations
 
   def overlaping_reservation?(datetime)

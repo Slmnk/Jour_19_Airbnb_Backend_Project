@@ -10,3 +10,4 @@ User.destroy_all
 City.destroy_all
 Listing.destroy_all
 Reservation.destroy_all
+puts "The previous database has been erased."
