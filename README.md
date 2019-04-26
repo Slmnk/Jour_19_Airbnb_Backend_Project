@@ -11,3 +11,6 @@ There should be four models :
 - `Reservation`
 
 Kise SHARY
+
+
+Manque la fin du seed (listings + fonctionnalité) + la méthode overlaping_reservation + distinction admin/guest/user

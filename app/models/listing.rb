@@ -24,7 +24,7 @@ class Listing < ApplicationRecord
 
   def overlaping_reservation?(datetime)
   # vérifie dans toutes les réservations du listing s'il y a une réservation qui tombe sur le datetime en entrée
-  Reservation.where
+  if Reservation.where.include?()
   end
 
 end
