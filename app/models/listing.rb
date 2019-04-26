@@ -2,10 +2,13 @@ class Listing < ApplicationRecord
 
   validates :available_beds,
     presence: true
+    amount: { greater_than => 0}
     # mettre le strictement positif
 
   validates :price,
-    presence: true
+    presence: true,
+    amount: { greater_than => 0}
+    # mettre le strictement positif
 
   validates :description,
     presence: true,
@@ -16,7 +19,7 @@ class Listing < ApplicationRecord
 
   belongs_to :user
   belongs_to :city
-  
+
   has_many :reservations
 
   def overlaping_reservation?(datetime)
